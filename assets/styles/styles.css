@@ -1,0 +1,361 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+  font-size: 19px;
+  background-color: #f1f1f1;
+}
+
+.to-top {
+  position: fixed;
+  bottom: 6rem;
+  right: 2rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: none;
+  background-color: #21209c;
+}
+
+.to-top img {
+  width: 80%;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5em 1em;
+  background-color: #23120b;
+  color: #f1f1f1;
+  font-size: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #f1f1f1;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
+
+main #search-section {
+  width: 100%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #21209c;
+}
+
+main #search-section h1 {
+  color: #fdb827;
+  font-size: 3rem;
+  text-align: center;
+}
+
+main #search-section div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main #search-section div #search {
+  width: 70%;
+  height: 5rem;
+  border: none;
+  padding: 0 1.5rem;
+  background-color: #f1f1f1;
+  font-size: 1.5em;
+  border-top-left-radius: 0.5em;
+  outline: none;
+  color: #23120b;
+}
+
+main #search-section div #search-btn {
+  width: 5rem;
+  height: 5rem;
+  border: none;
+  cursor: pointer;
+  background-color: #fdb827;
+  border-bottom-right-radius: 1em;
+}
+
+main #search-section div #search-btn img {
+  width: 1.5rem;
+}
+
+main #search-section #loading {
+  width: 2rem;
+  height: 2rem;
+  border: 5px solid white;
+  border-top: 6px solid #fdb827;
+  border-radius: 100%;
+  margin: 2rem;
+  visibility: hidden;
+  -webkit-animation: spin infinite 1000ms linear;
+          animation: spin infinite 1000ms linear;
+}
+
+main #search-section #loading.display {
+  visibility: visible;
+}
+
+main #lists #anime-list {
+  width: 90%;
+  margin: 1em auto;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (100%)[1];
+      grid-template-columns: repeat(1, 100%);
+}
+
+main #lists #anime-list li {
+  list-style: none;
+  border: 1px solid #21209c;
+  margin: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 325px;
+  font-size: 1.5rem;
+}
+
+main #lists #anime-list li .card-body {
+  padding: 1em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+main #lists #anime-list li p {
+  margin: 0 auto;
+}
+
+main #lists #anime-list li .card-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  color: #21209c;
+}
+
+main #show-anime {
+  display: none;
+  position: fixed;
+  background-color: #f1f1f1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 90%;
+  height: 90%;
+  margin: auto;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  overflow-y: scroll;
+  font-size: 1.5rem;
+  z-index: 100;
+}
+
+main #show-anime .img-banner {
+  width: 100%;
+}
+
+main #show-anime .close-show-anime {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  top: 1rem;
+  left: 1rem;
+  background-color: rgba(35, 18, 11, 0.6);
+  color: #f1f1f1;
+  border: none;
+  cursor: pointer;
+}
+
+main #show-anime .close-show-anime img {
+  width: 50%;
+}
+
+main #show-anime .grid {
+  padding: 2em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 70%;
+      grid-template-columns: auto 70%;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+      grid-template-areas: "sidebar main" "sidebar vid";
+  gap: 2rem;
+}
+
+main #show-anime .grid .left {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: sidebar;
+}
+
+main #show-anime .grid .left h3:nth-of-type(1) {
+  margin-top: 0;
+}
+
+main #show-anime .grid .left h3 {
+  margin-bottom: 0;
+}
+
+main #show-anime .grid .block {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: main;
+}
+
+main #show-anime .grid .block h2 {
+  margin-top: 0;
+}
+
+main #show-anime .grid .right {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: vid;
+}
+
+main #show-anime .grid .right h2 {
+  margin-top: 0;
+}
+
+main #show-anime .grid .right .embedded-vid {
+  width: 100%;
+  height: 300px;
+}
+
+main #pages {
+  text-align: center;
+}
+
+main #pages .load-btn {
+  width: 30%;
+  height: 100px;
+  margin-bottom: 150px;
+  font-size: 1.5rem;
+  background-color: #fdb827;
+  color: #23120b;
+  border: 1px solid #23120b;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #23120b;
+  width: 100%;
+  height: 5rem;
+}
+
+footer p {
+  text-align: center;
+  color: rgba(241, 241, 241, 0.5);
+  line-height: 5rem;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 17px;
+  }
+  body nav {
+    height: 3rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 15px;
+  }
+  .to-top {
+    width: 70px;
+    height: 70px;
+  }
+  nav {
+    height: 3rem;
+    font-size: 1.5rem;
+  }
+  nav a {
+    font-size: 1rem;
+  }
+  main #search-section div #search {
+    width: 50%;
+    height: 3rem;
+  }
+  main #search-section div #search-btn {
+    height: 3rem;
+  }
+  main #lists #anime-list {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  main #lists #anime-list li {
+    font-size: 1rem;
+  }
+  main #pages .load-btn {
+    width: 15%;
+    height: 3rem;
+  }
+  footer {
+    height: 3rem;
+  }
+  footer p {
+    line-height: 3rem;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

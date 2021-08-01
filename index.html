@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>MF-Anime List</title>
+    <link rel="stylesheet" href="assets/styles/styles.css" />
+  </head>
+  <body>
+    <nav>
+      <div id="logo">lexChvz</div>
+      <a href="https://github.com/lexChvz" target="_blank">Github</a>
+    </nav>
+    <main>
+      <header id="search-section">
+        <h1>My Fetched Anime List</h1>
+        <div>
+          <input type="search" id="search" placeholder="Search Anime" />
+          <button type="submit" id="search-btn">
+            <img src="assets/imgs/search-solid.svg" alt="search-svg" />
+          </button>
+        </div>
+        <div id="loading"></div>
+      </header>
+      <section id="lists">
+        <ul id="anime-list"></ul>
+      </section>
+      <section id="show-anime">
+        <button class="close-show-anime">
+          <img src="assets/imgs/times-solid.svg" alt="x-icon" />
+        </button>
+        <img class="img-banner" alt="" />
+        <div class="grid">
+          <aside class="left">
+            <h3>Score:</h3>
+            <p class="score"></p>
+            <h3>Episodes:</h3>
+            <p class="episodes"></p>
+            <h3>Duration:</h3>
+            <p class="duration"></p>
+            <h3>Start Date:</h3>
+            <p class="start-date"></p>
+            <h3>End Date:</h3>
+            <p class="end-date"></p>
+            <h3>Season Year:</h3>
+            <p class="season-year"></p>
+            <h3>Season Period:</h3>
+            <p class="season-period"></p>
+            <h3>Status:</h3>
+            <p class="status"></p>
+            <h3>Format:</h3>
+            <p class="format"></p>
+          </aside>
+          <div class="block">
+            <h2>Titles:</h2>
+            <p class="titles"></p>
+            <h2>Description:</h2>
+            <p class="anime-description"></p>
+            <h2>Genres:</h2>
+            <p class="genres"></p>
+          </div>
+          <aside class="right">
+            <h2>Trailer:</h2>
+            <iframe
+              class="embedded-vid"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </aside>
+        </div>
+      </section>
+      <section id="pages">
+        <!-- <button class="prev-btn">previous page</button> -->
+        <button class="load-btn">Load more</button>
+      </section>
+    </main>
+    <footer>
+      <section>
+        <p>&copy; lexChvz2021</p>
+      </section>
+    </footer>
+    <button class="to-top">
+      <img src="assets/imgs/arrow.svg" alt="arrow-up" />
+    </button>
+    <script type="text/javascript" src="assets/js/index.js"></script>
+  </body>
+</html>
