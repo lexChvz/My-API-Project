@@ -347,6 +347,9 @@ footer p {
   main #lists #anime-list li {
     font-size: 1rem;
   }
+  main #show-anime {
+    font-size: 1rem;
+  }
   main #pages .load-btn {
     width: 15%;
     height: 3rem;
