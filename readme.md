@@ -2,4 +2,7 @@
 
 <p>My first personal Fetch API project</p>
 
-Screen Shot 2021-08-01 at 7.44.51 PM
+<img src="assets/imgs/PICS001.png"/>
+<img src="assets/imgs/PICS002.png"/>
+<img src="assets/imgs/PICS003.png"/>
+<img src="assets/imgs/PICS004.png"/>
